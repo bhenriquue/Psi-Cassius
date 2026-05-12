@@ -1,0 +1,1042 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Inter;
+  background:#f6f9fc;
+  color:#1f2d3a;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  width:100%;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(12px);
+  padding:18px 0;
+  z-index:999;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-family:"Cormorant Garamond";
+  font-size:30px;
+  color:#24527a;
+}
+
+/* NAV ANIMADO */
+nav{
+  display:flex;
+  gap:25px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#1f2d3a;
+  position:relative;
+  transition:0.3s;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:0;
+  height:2px;
+  background:#24527a;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+nav a:hover{
+  color:#24527a;
+}
+
+.menu-mobile{
+  display:none;
+  font-size:28px;
+}
+
+/* HERO */
+.hero{
+  padding:170px 0 100px;
+  background:linear-gradient(180deg,#eaf3fb,#fff);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* IMAGENS CORRIGIDAS */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+.hero-img img{
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:0.6s;
+}
+
+.hero-img img:hover{
+  transform:scale(1.03);
+}
+
+.split-img img{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:0.6s;
+}
+
+.split-img img:hover{
+  transform:scale(1.02);
+}
+
+/* SEÇÕES */
+.section{
+  padding:100px 0;
+}
+
+.section.alt{
+  background:#fff;
+}
+
+.section-title{
+  font-size:40px;
+  text-align:center;
+  margin-bottom:60px;
+  font-family:"Cormorant Garamond";
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:35px;
+}
+
+/* CARDS ANIMADOS */
+.card{
+  background:white;
+  padding:28px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 18px 35px rgba(0,0,0,0.1);
+}
+
+/* CTA */
+.cta{
+  background:#24527a;
+  color:white;
+  text-align:center;
+  padding:120px 0;
+}
+
+/* FOOTER */
+footer{
+  background:#0f2233;
+  color:white;
+  padding:50px 0;
+  text-align:center;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* WHATS */
+.whats{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  padding:16px;
+  border-radius:50%;
+}
+
+/* ANIMAÇÃO SCROLL GLOBAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.9s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+.hero-grid,
+.split-grid,
+.location-box{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+
+nav{
+  display:none;
+}
+
+.menu-mobile{
+  display:block;
+}
+
+.hero-img img,
+.split-img img{
+  max-height:320px;
+}
+
+.footer-grid{
+  grid-template-columns:1fr;
+}
+
+}
+
+
+/* =========================
+   BOTÃO AGENDAR CONSULTA
+========================= */
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:linear-gradient(135deg,#24527a,#3a7ca5);
+  color:white;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(36,82,122,0.25);
+  position:relative;
+  overflow:hidden;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(36,82,122,0.35);
+}
+
+/* brilho animado */
+.btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transition:0.6s;
+}
+
+.btn:hover::before{
+  left:100%;
+}
+
+/* =========================
+   ESPECIALIDADES (EFEITO)
+========================= */
+
+#servicos .card{
+  transition:0.5s;
+  position:relative;
+  overflow:hidden;
+}
+
+#servicos .card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(135deg,#24527a20,#ffffff);
+  opacity:0;
+  transition:0.4s;
+}
+
+#servicos .card:hover::before{
+  opacity:1;
+}
+
+#servicos .card:hover{
+  transform:translateY(-12px) scale(1.02);
+}
+
+/* =========================
+   DEPOIMENTOS 
+========================= */
+
+#depoimentos .card{
+  border-left:4px solid #24527a;
+  transition:0.4s;
+}
+
+#depoimentos .card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   FAQ ANIMADO
+========================= */
+
+#faq .card h4{
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#faq .card:hover{
+  transform:translateY(-5px);
+}
+
+/* =========================
+   CTA “VAMOS CONVERSAR” 
+========================= */
+
+.cta{
+  background:linear-gradient(135deg,#24527a,#1b3d5a);
+  position:relative;
+  overflow:hidden;
+}
+
+.cta h2{
+  font-size:42px;
+  margin-bottom:25px;
+}
+
+/* efeito de partículas leves */
+.cta::before{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle,rgba(255,255,255,0.08) 1px,transparent 1px);
+  background-size:40px 40px;
+  animation:moveBg 20s linear infinite;
+}
+
+@keyframes moveBg{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(-200px,-200px);}
+}
+
+/* =========================
+   FOOTER COMPLETO
+========================= */
+
+footer{
+  background:#0b1a28;
+  position:relative;
+}
+
+footer strong{
+  display:block;
+  font-size:18px;
+  margin-bottom:8px;
+  color:#ffffff;
+}
+
+footer p{
+  font-size:14px;
+  opacity:0.8;
+}
+
+/* separação visual footer */
+.footer-grid div{
+  padding:10px;
+  transition:0.3s;
+}
+
+.footer-grid div:hover{
+  transform:translateY(-5px);
+}
+
+/* =========================
+   ANIMAÇÃO GLOBAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:1s cubic-bezier(0.25,1,0.5,1);
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================
+   BOTÃO WHATSAPP CTA
+========================= */
+
+.btn-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  padding:16px 32px;
+  margin-top:20px;
+
+  background:linear-gradient(135deg,#25d366,#1ebe5d);
+  color:#fff;
+
+  font-size:16px;
+  font-weight:600;
+  text-decoration:none;
+
+  border-radius:14px;
+
+  box-shadow:0 15px 30px rgba(37,211,102,0.25);
+
+  transition:0.4s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* ícone estilo whatsapp (sem imagem externa) */
+.btn-whatsapp::before{
+  content:"💬";
+  font-size:18px;
+}
+
+/* brilho animado */
+.btn-whatsapp::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:120%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transition:0.6s;
+}
+
+.btn-whatsapp:hover::after{
+  left:120%;
+}
+
+.btn-whatsapp:hover{
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:0 20px 40px rgba(37,211,102,0.35);
+}
+
+/* CTA CENTRALIZA MELHOR O BOTÃO */
+.cta .container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.map-container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:30px;
+}
+
+.map-container iframe{
+  width:100%;
+  max-width:1000px;
+  height:380px;
+
+  border:0;
+  border-radius:18px;
+
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+
+  transition:0.4s ease;
+}
+
+/* efeito premium leve */
+.map-container iframe:hover{
+  transform:scale(1.01);
+  box-shadow:0 25px 55px rgba(0,0,0,0.18);
+}
+
+/* mobile */
+@media(max-width:768px){
+  .map-container iframe{
+    height:300px;
+    border-radius:14px;
+  }
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(6px);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.modal-content{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  max-width:500px;
+  width:90%;
+  animation:popup 0.3s ease;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+
+@keyframes popup{
+  from{transform:scale(0.8); opacity:0;}
+  to{transform:scale(1); opacity:1;}
+}
+
+.close{
+  float:right;
+  font-size:24px;
+  cursor:pointer;
+}
+
+
+/* card normal */
+.toggle-card{
+  cursor:pointer;
+  transition:0.4s ease;
+  padding:28px;
+  border-radius:16px;
+}
+
+/* descrição escondida por padrão */
+.hidden-text{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:0.4s ease;
+  margin-top:0;
+  font-size:14px;
+  color:#555;
+}
+
+/* quando ativo */
+.toggle-card.active .hidden-text{
+  max-height:200px;
+  opacity:1;
+  margin-top:10px;
+}
+
+/* efeito visual leve */
+.toggle-card.active{
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+.toggle-card h3{
+  margin-bottom:0;
+  transition:0.3s;
+}
+
+.toggle-card.active h3{
+  color:#24527a;
+}
+
+.footer-link{
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+  position:relative;
+}
+
+.footer-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-3px;
+  width:0%;
+  height:1px;
+  background:#25d366;
+  transition:0.3s;
+}
+
+.footer-link:hover{
+  color:#25d366;
+}
+
+.footer-link:hover::after{
+  width:100%;
+}
+
+
+.cta-buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+/* BASE DOS BOTÕES */
+.btn-social{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  padding:16px 28px;
+  min-width:180px;
+
+  font-size:16px;
+  font-weight:600;
+  text-decoration:none;
+
+  border-radius:14px;
+
+  color:#fff;
+
+  transition:0.4s ease;
+  position:relative;
+  overflow:hidden;
+
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ÍCONES */
+.icon{
+  font-size:18px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  background:linear-gradient(135deg,#25d366,#1ebe5d);
+}
+
+.whatsapp:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(37,211,102,0.35);
+}
+
+/* INSTAGRAM */
+.instagram{
+  background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);
+}
+
+.instagram:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(221,42,123,0.35);
+}
+
+/* brilho comum */
+.btn-social::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:120%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transition:0.6s;
+}
+
+.btn-social:hover::after{
+  left:120%;
+}
+
+
+@media(max-width:900px){
+
+  nav{
+    position:fixed;
+    top:70px;
+    right:20px;
+    left:20px;
+
+    background:white;
+    flex-direction:column;
+    gap:0;
+
+    border-radius:14px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+    overflow:hidden;
+
+    max-height:0;
+    opacity:0;
+    transform:translateY(-10px);
+
+    transition:0.4s ease;
+    padding:0;
+  }
+
+  nav a{
+    padding:14px 20px;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+  }
+
+  nav.show{
+    max-height:400px;
+    opacity:1;
+    transform:translateY(0);
+    padding:10px 0;
+  }
+
+}
+.icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.icon svg{
+  display:block;
+}
+
+
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+
+  width:60px;
+  height:60px;
+
+  background:#25D366;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+  z-index:9999;
+
+  transition:0.3s ease;
+}
+
+/* hover premium */
+.whatsapp-float:hover{
+  transform:scale(1.1);
+  box-shadow:0 15px 35px rgba(37,211,102,0.45);
+}
+
+/* efeito de pulsação */
+.whatsapp-float::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  background:rgba(37,211,102,0.4);
+  animation:pulse 1.8s infinite;
+  z-index:-1;
+}
+
+@keyframes pulse{
+  0%{
+    transform:scale(1);
+    opacity:0.8;
+  }
+  100%{
+    transform:scale(1.6);
+    opacity:0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.logo{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* garante que nunca fique sublinhado */
+.logo:hover,
+.logo:visited,
+.logo:active{
+  text-decoration: none;
+}
+
+.hero-img img{
+  width:100%;
+  max-width:500px;
+  height:auto;
+  object-fit:cover;
+  border-radius:20px;
+  display:block;
+}
+
+.split-img img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  object-fit:cover;
+  border-radius:20px;
+  display:block;
+  margin:auto;
+}
+
+/* títulos dos cards de especialidades */
+.specialties .card h3{
+  color:#24527a;
+  margin-bottom:12px;
+  font-size:1.15rem;
+  font-weight:600;
+}
+
+
+.testimonials-premium{
+  text-align:center;
+}
+
+.testimonial-wrapper{
+  position:relative;
+  max-width:750px;
+  margin:40px auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.testimonial-track{
+  width:100%;
+  position:relative;
+}
+
+.testimonial-card{
+  display:none;
+  padding:35px;
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+
+  transition:0.6s ease;
+}
+
+.testimonial-card.active{
+  display:block;
+  animation:fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide{
+  from{opacity:0; transform:translateY(15px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.stars{
+  color:#f5b301;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.testimonial-card p{
+  font-style:italic;
+  line-height:1.6;
+  color:#444;
+}
+
+.testimonial-card h4{
+  margin-top:15px;
+  color:#24527a;
+}
+
+/* setas */
+.nav{
+  background:white;
+  border:none;
+  font-size:24px;
+  cursor:pointer;
+
+  width:40px;
+  height:40px;
+  border-radius:50%;
+
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+  transition:0.3s;
+}
+
+.nav:hover{
+  transform:scale(1.1);
+}
+
+/* dots */
+
+/* wrapper */
+.testimonial-wrapper{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
+
+/* track */
+.testimonial-track{
+  width:100%;
+}
+
+/* card */
+.testimonial-card{
+  display:none;
+
+  max-width:650px;
+  margin:0 auto;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  background:#fff;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+  position:relative;
+  z-index:1;
+
+  cursor:pointer;
+
+  transition:0.4s ease;
+}
+
+.testimonial-card.active{
+  display:block;
+}
+
+/* hover */
+.testimonial-card:hover{
+  transform:translateY(-5px);
+}
+
+/* estrelas */
+.stars{
+  color:#f5b301;
+  margin-bottom:10px;
+}
+
+/* setas */
+.nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:none;
+  border-radius:50%;
+
+  background:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+  cursor:pointer;
+  z-index:9999;
+
+  font-size:22px;
+  color:#24527a;
+}
+
+.nav.prev{ left:-20px; }
+.nav.next{ right:-20px; }
+
+.nav:hover{
+  transform:translateY(-50%) scale(1.1);
+}
+
+/* dots */
+.dots span{
+  width:10px;
+  height:10px;
+  display:inline-block;
+  border-radius:50%;
+  background:#ccc;
+  margin:5px;
+  cursor:pointer;
+}
+
+.dots span.active{
+  background:#24527a;
+}
+
+/* mobile fix */
+@media(max-width:768px){
+
+  .nav.prev{
+    left:8px !important;
+  }
+
+  .nav.next{
+    right:8px !important;
+  }
+
+}
+
+@media(max-width:900px){
+
+  nav.show{
+    display:flex !important;
+  }
+
+}
+
+.menu-mobile{
+  cursor:pointer;
+  user-select:none;
+}
+
+.menu-mobile:hover{
+  opacity:0.8;
+  transform:scale(1.05);
+  transition:0.2s;
+}

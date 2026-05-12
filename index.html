@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Psicólogo - Cassius Francisco</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<div id="modal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+
+  </div>
+
+</div>
+<body>
+  <div id="topo"></div>
+
+<header>
+  <div class="container header-inner">
+
+    <a href="#topo" class="logo reveal">
+  Psicólogo - Cassius Francisco
+</a>
+
+   <nav id="menu">
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Especialidades</a>
+  <a href="#depoimentos">Depoimentos</a>
+  <a href="#faq">FAQ</a>
+  <a href="#localizacao">Localização</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<div class="menu-mobile" onclick="toggleMenu()" aria-label="Menu">
+  ☰
+</div>
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="hero-text reveal">
+      <span>PSICOTERAPIA • ONLINE E PRESENCIAL</span>
+
+      <h1>Cuidar da sua mente é o primeiro passo para transformar sua vida</h1>
+
+      <p>Atendimento psicológico com acolhimento humano e base científica.</p>
+
+      <a href="https://wa.me/5581984280457" class="btn reveal">Agendar Consulta</a>
+    </div>
+
+    <div class="hero-img reveal">
+  <img src="images/inicio.jpeg" alt="Foto principal">
+</div>
+
+  </div>
+
+</section>
+
+<section id="sobre" class="section">
+
+  <div class="container split-grid">
+
+    <div class="split-img reveal">
+  <img src="./images/body.jpeg" alt="Sobre o profissional">
+</div>
+
+    <div class="split-text reveal">
+      <h2>Sobre mim</h2>
+      <p>Sou graduado em Psicologia e atuo com atendimentos baseados na Terapia Cognitivo-Comportamental (TCC), abordagem voltada para o desenvolvimento emocional e promoção de qualidade de vida.
+
+Trabalho no acompanhamento de demandas como ansiedade, depressão, autoestima, dificuldades nos relacionamentos, inseguranças e questões emocionais do dia a dia, oferecendo um espaço acolhedor, ético e humanizado.
+
+Também atuo como aplicador ABA e acompanhante terapêutico, realizando acompanhamento individualizado conforme as necessidades de cada paciente.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="servicos" class="section alt">
+
+  <div class="container">
+
+    <h2 class="section-title reveal">Especialidades</h2>
+
+    
+
+<div class="grid specialties">
+
+
+  <div class="card reveal">
+  <h3>Terapia Cognitivo Comportamental</h3>
+  <p>
+    Atendimento psicológico baseado na Terapia Cognitivo Comportamental (TCC), auxiliando na identificação de padrões de pensamento, emoções e comportamentos para promover mudanças positivas.
+  </p>
+</div>
+
+<div class="card reveal">
+  <h3>Acompanhante Terapêutico</h3>
+  <p>
+    Suporte terapêutico em diferentes contextos do cotidiano, promovendo desenvolvimento emocional, social e comportamental.
+  </p>
+</div>
+
+<div class="card reveal">
+  <h3>Aplicador ABA</h3>
+  <p>
+    Intervenção com base na Análise do Comportamento Aplicada (ABA), auxiliando no desenvolvimento de habilidades e autonomia.
+  </p>
+</div>
+
+<div class="card reveal">
+  <h3>Psicólogo Clínico</h3>
+  <p>
+    Atendimento psicológico individualizado para crianças, adolescentes e adultos, com foco em saúde mental e qualidade de vida.
+  </p>
+</div>
+
+  <div class="card reveal toggle-card" onclick="toggleCard(this)">
+    <h3>Ansiedade</h3>
+    <p class="hidden-text">
+      Tratamento voltado para redução de sintomas físicos e mentais da ansiedade, com técnicas terapêuticas baseadas em evidências.
+    </p>
+  </div>
+
+  <div class="card reveal toggle-card" onclick="toggleCard(this)">
+    <h3>Depressão</h3>
+    <p class="hidden-text">
+      Acompanhamento psicológico para compreensão emocional, fortalecimento interno e melhora da qualidade de vida.
+    </p>
+  </div>
+
+  <div class="card reveal toggle-card" onclick="toggleCard(this)">
+    <h3>Relacionamentos</h3>
+    <p class="hidden-text">
+      Auxílio em conflitos afetivos, comunicação e construção de vínculos mais saudáveis.
+    </p>
+  </div>
+
+  <div class="card reveal toggle-card" onclick="toggleCard(this)">
+    <h3>Autoconhecimento</h3>
+    <p class="hidden-text">
+      Processo terapêutico para compreensão de si mesmo, emoções e padrões de comportamento.
+    </p>
+  </div>
+
+
+
+</div>
+
+  
+
+</div>
+
+  </div>
+
+</section>
+
+
+
+<section id="depoimentos" class="testimonials-premium reveal">
+
+  <div class="container">
+
+    <h2>O que dizem os pacientes</h2>
+
+    <div class="testimonial-wrapper">
+
+      <button class="nav prev" onclick="changeTestimonial(-1)">&#10094;</button>
+
+      <div class="testimonial-track">
+
+        <div class="testimonial-card active"
+             onclick="window.open('https://www.google.com/search?q=cassius+francisco+psicologo&sourceid=chrome&ie=UTF-8#lrd=0x7ab191ffa4ba5bf:0x2d8546e8f33c6715,1,,,,','_blank')">
+
+          <div class="stars">★★★★★</div>
+          <p>“Um psicólogo muito humano, transmite sensibilidade, acolhimento. Ético, dedicado e atencioso.”</p>
+          <h4>Kelly Lima</h4>
+
+        </div>
+
+        <div class="testimonial-card"
+             onclick="window.open('https://www.google.com/search?q=cassius+francisco+psicologo&sourceid=chrome&ie=UTF-8#lrd=0x7ab191ffa4ba5bf:0x2d8546e8f33c6715,1,,,,','_blank')">
+
+          <div class="stars">★★★★★</div>
+          <p>“Ambiente muito bom, tranquilo, bem localizado e estruturado, além de profissional excelente!”</p>
+          <h4>Luisa Gusmão Moraes</h4>
+
+        </div>
+
+        <div class="testimonial-card"
+             onclick="window.open('https://www.google.com/search?q=cassius+francisco+psicologo&sourceid=chrome&ie=UTF-8#lrd=0x7ab191ffa4ba5bf:0x2d8546e8f33c6715,1,,,,','_blank')">
+
+          <div class="stars">★★★★★</div>
+          <p>“Muito ético, atencioso e competente. O acompanhamento fez muita diferença na minha vida.”</p>
+          <h4>Jéssica Silva</h4>
+
+        </div>
+
+      </div>
+
+      <button class="nav next" onclick="changeTestimonial(1)">&#10095;</button>
+
+    </div>
+
+    <div class="dots">
+      <span onclick="goToTestimonial(0)"></span>
+      <span onclick="goToTestimonial(1)"></span>
+      <span onclick="goToTestimonial(2)"></span>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="faq" class="section alt">
+
+  <div class="container">
+
+    <h2 class="section-title reveal">Perguntas Frequentes</h2>
+
+    <div class="grid">
+
+      <div class="card reveal">
+        <h4>Como funciona?</h4>
+        <p>Sessões de psicoterapia realizadas com base na Terapia Cognitivo-Comportamental (TCC), abordagem focada na relação entre pensamentos, emoções e comportamentos.
+
+Um espaço acolhedor, ético e confidencial para auxiliar no desenvolvimento emocional, autoconhecimento e enfrentamento das dificuldades do dia a dia. Atendimento online.</p>
+      </div>
+
+      <div class="card reveal">
+        <h4>Atende online?</h4>
+        <p>Sim, o atendimento é realizado de forma online, proporcionando mais praticidade, conforto e flexibilidade para o acompanhamento psicológico.</p>
+      </div>
+
+      <div class="card reveal">
+        <h4>Duração?</h4>
+        <p>As sessões possuem uma duração de 45 a 50 minutos</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="localizacao" class="section">
+
+  <div class="container location-box">
+
+    <div class="reveal">
+      <h2>Localização</h2>
+      <p>Endereço: Estr. do Forte do Arraial Novo do Bom Jesus, 657 - Cordeiro, Recife - PE, 50721-110</p>
+      <a class="btn" 
+   href="https://www.google.com/maps/search/?api=1&query=Psic%C3%B3logo%20-%20Cassius%20Francisco%20Olinda%20PE" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  Abrir no Google Maps
+</a>
+    </div>
+
+    <div class="map-container reveal">
+
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.4731503485636!2d-34.93108812587492!3d-8.053122880446109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab191ffa4ba5bf%3A0x2d8546e8f33c6715!2sPsic%C3%B3logo%20-%20Cassius%20Francisco!5e0!3m2!1spt-BR!2sbr!4v1778524333515!5m2!1spt-BR!2sbr"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+</div>
+
+  </div>
+
+</section>
+
+
+<section id="contato" class="cta reveal">
+
+  <div class="container">
+
+    <h2>Vamos conversar?</h2>
+
+    
+<div class="cta-buttons">
+
+  <a href="https://wa.me/5581984280457" 
+     class="btn-social whatsapp" 
+     target="_blank">
+
+    <span class="icon">
+      <!-- WhatsApp SVG -->
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor">
+        <path d="M19.11 17.53c-.28-.14-1.64-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.33.21-.61.07-.28-.14-1.18-.43-2.25-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.28-1 1-1 2.44 0 1.44 1.03 2.83 1.17 3.03.14.19 2.03 3.1 4.93 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.64-.67 1.87-1.31.23-.64.23-1.19.16-1.31-.07-.12-.26-.19-.54-.33z"/>
+        <path d="M16 3C9.37 3 4 8.37 4 15c0 2.4.7 4.64 1.91 6.53L4 29l7.72-1.85C13.52 28.41 14.72 29 16 29c6.63 0 12-5.37 12-12S22.63 3 16 3zm0 22c-1.17 0-2.32-.3-3.33-.86l-.24-.13-4.58 1.1 1.22-4.47-.15-.25A9.94 9.94 0 0 1 6 15c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10z"/>
+      </svg>
+    </span>
+
+    WhatsApp
+  </a>
+
+  <a href="https://www.instagram.com/cassius.psi?igsh=MTBrMGxteWRjemgyNw==" 
+     class="btn-social instagram" 
+     target="_blank">
+
+    <span class="icon">
+      <!-- Instagram SVG -->
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zM17.5 6a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/>
+      </svg>
+    </span>
+
+    Instagram
+  </a>
+
+</div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="container footer-grid">
+
+    <div class="reveal">
+      <strong>Psicólogo - Cassius Francisco</strong>
+      <p>Psicólogo Clínico</p>
+    </div>
+
+    <div class="reveal">
+      <p>© 2026 Todos os direitos reservados</p>
+    </div>
+
+    <div class="reveal">
+  <p>
+    Desenvolvido por 
+    <a href="https://www.linkedin.com/in/bruno-henriqque" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="footer-link">
+      Bruno Henrique
+    </a>
+  </p>
+</div>
+
+  </div>
+
+</footer>
+
+
+<a href="https://wa.me/5581984280457" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer">
+
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+    <path d="M19.11 17.53c-.28-.14-1.64-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.33.21-.61.07-.28-.14-1.18-.43-2.25-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.28-1 1-1 2.44 0 1.44 1.03 2.83 1.17 3.03.14.19 2.03 3.1 4.93 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.64-.67 1.87-1.31.23-.64.23-1.19.16-1.31-.07-.12-.26-.19-.54-.33z"/>
+    <path d="M16 3C9.37 3 4 8.37 4 15c0 2.4.7 4.64 1.91 6.53L4 29l7.72-1.85C13.52 28.41 14.72 29 16 29c6.63 0 12-5.37 12-12S22.63 3 16 3zm0 22c-1.17 0-2.32-.3-3.33-.86l-.24-.13-4.58 1.1 1.22-4.47-.15-.25A9.94 9.94 0 0 1 6 15c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10z"/>
+  </svg>
+
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
